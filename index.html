@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Story · Maham — soft emoji & cute style</title>
+  <style>
+    /* ★ soft beige, cute & beginner friendly — requested: black nahi, pyara ★ */
+    body {
+      background-color: #faead3;   /* warmer beige */
+      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      margin: 0;
+      padding: 25px 15px;
+      color: #3a2c1c;
+    }
+
+    /* main card */
+    main {
+      max-width: 880px;
+      margin: 0 auto;
+      background-color: #fff9f0;    /* creamy, extra soft */
+      padding: 25px 25px 30px 25px;
+      border-radius: 45px 45px 35px 35px;
+      box-shadow: 0 12px 24px rgba(140, 100, 70, 0.08);
+      border: 1px solid #e2cfb4;
+    }
+
+    /* header area — cute & gentle */
+    header {
+      background-color: #f7e3cc;
+      padding: 20px 20px 15px 20px;
+      border-radius: 60px 60px 30px 30px;
+      text-align: center;
+      margin-bottom: 20px;
+      border: 2px solid #e1c7a8;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin: 0;
+      color: #4f3a24;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      margin: 10px 0 5px 0;
+      color: #614c33;
+      font-style: italic;
+      background: #edd9be;
+      display: inline-block;
+      padding: 5px 25px;
+      border-radius: 40px;
+    }
+
+    /* navigation – cute links */
+    nav {
+      background-color: #efdecb;
+      padding: 14px 15px;
+      border-radius: 60px;
+      margin-bottom: 25px;
+      text-align: center;
+      border: 1px solid #dbbc9b;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav li {
+      display: inline-block;
+      margin: 0 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #543f28;
+      font-weight: bold;
+      font-size: 1.15rem;
+      padding: 6px 14px;
+      background: #f9ebdb;
+      border-radius: 40px;
+      transition: all 0.2s;
+      border: 1px solid #e6cbb0;
+    }
+
+    nav a:hover {
+      background-color: #f2d9bd;
+      border-color: #b48b5f;
+      transform: scale(1.02);
+    }
+
+    /* section headings — soft left border */
+    section h2 {
+      font-size: 2.1rem;
+      border-left: 12px solid #e2c0a0;
+      padding-left: 20px;
+      margin: 30px 0 20px 0;
+      color: #4e3921;
+    }
+
+    /* article – story box */
+    article {
+      background-color: #fcf2e2;
+      padding: 18px 28px;
+      border-radius: 45px 15px 45px 15px;
+      border: 2px solid #e7cfb2;
+      margin: 15px 0 25px 0;
+    }
+
+    article p {
+      font-size: 1.22rem;
+      line-height: 1.6;
+    }
+
+    /* figure area — avatar emoji super cute, no black */
+    figure {
+      background-color: #f5e5d2;
+      padding: 20px 15px;
+      border-radius: 90px 30px 90px 30px;
+      text-align: center;
+      border: 3px solid #f0d5b6;
+      margin: 20px 0;
+      box-shadow: 0 4px 8px rgba(240, 200, 160, 0.3);
+    }
+
+    .avatar-emoji {
+      font-size: 5.5rem;           /* bigger, cuter */
+      background: #fae9cf;          /* very light peachy */
+      padding: 20px 35px;
+      border-radius: 70% 30% 50% 50%;
+      display: inline-block;
+      border: 4px solid #fadbb6;
+      transform: rotate(-2deg);
+      box-shadow: 0 4px 0 #eacaa8;
+      line-height: 1;
+    }
+
+    figcaption {
+      margin-top: 16px;
+      font-size: 1.3rem;
+      color: #5f452b;
+      background: #fae2c9;
+      padding: 8px 25px;
+      border-radius: 40px;
+      display: inline-block;
+      font-weight: 500;
+      border: 2px solid #f5cdab;
+    }
+
+    /* profile info list (dl style but we keep .info-box) */
+    .info-box {
+      background-color: #fcf0de;
+      padding: 22px 28px;
+      border-radius: 50px;
+      border: 2px solid #ebd2b6;
+      font-size: 1.25rem;
+    }
+
+    .info-row {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 10px 0;
+      border-bottom: 1px dashed #ebc9a5;
+      padding-bottom: 6px;
+    }
+    .info-row:last-child { border-bottom: none; }
+
+    .info-label {
+      font-weight: bold;
+      color: #664c30;
+      width: 120px;
+    }
+
+    .info-value {
+      color: #2f2419;
+    }
+
+    /* details / summary — cute toggles */
+    details {
+      background: #f8ebd8;
+      padding: 15px 25px;
+      border-radius: 50px;
+      margin: 25px 0;
+      border-left: 12px solid #efcba2;
+    }
+
+    summary {
+      font-size: 1.5rem;
+      font-weight: bold;
+      cursor: pointer;
+      color: #3d2d1a;
+      list-style: '💖 ';      /* cute marker */
+    }
+    summary::-webkit-details-marker { display: none; } /* hide default */
+
+    details p {
+      margin: 15px 0 5px 0;
+      padding-top: 10px;
+      border-top: 2px dotted #e6b789;
+    }
+
+    /* blockquote */
+    blockquote {
+      background: #fcf0de;
+      padding: 20px 25px;
+      border-radius: 120px 20px 120px 20px;
+      font-style: italic;
+      border: 3px solid #fad6b3;
+      margin: 20px 0;
+      font-size: 1.3rem;
+      box-shadow: 0 6px 0 #edd0b0;
+    }
+
+    blockquote footer {
+      background: none;
+      padding: 5px 0 0 0;
+      text-align: right;
+      font-weight: bold;
+      color: #7a5b38;
+      border: none;
+      font-size: 1.2rem;
+    }
+
+    /* hobby list with cute bullets */
+    .hobby-list {
+      background: #fcf0de;
+      padding: 18px 30px 18px 45px;
+      border-radius: 60px;
+      list-style-type: '🍿 ';      /* movie snack */
+      font-size: 1.25rem;
+      border: 2px solid #f0cfb0;
+    }
+
+    .hobby-list li {
+      margin: 10px 0;
+      padding-left: 5px;
+    }
+
+    /* footer cute */
+    footer {
+      background-color: #f2ddc4;
+      padding: 15px 20px;
+      border-radius: 80px 80px 30px 30px;
+      text-align: center;
+      margin-top: 30px;
+      border: 2px solid #ebc8a2;
+    }
+
+    address {
+      font-style: normal;
+      background: #f9e9d4;
+      padding: 12px 25px;
+      border-radius: 60px;
+      display: inline-block;
+      margin: 10px 0;
+      border: 2px solid #eacaa8;
+    }
+
+    hr {
+      border: 3px solid #efd6ba;
+      border-radius: 20px;
+      margin: 25px 0;
+    }
+
+    time {
+      display: block;
+      text-align: right;
+      color: #735f44;
+      margin: 5px 0 15px 0;
+      font-weight: bold;
+      background: #fbefdf;
+      padding: 5px 15px;
+      border-radius: 50px;
+      width: fit-content;
+      float: right;
+    }
+
+    /* simple pre style */
+    pre {
+      background: #fcf0de;
+      padding: 18px;
+      border-radius: 50px;
+      border: 2px solid #efcfaf;
+      white-space: pre-wrap;
+      font-family: inherit;
+      font-size: 1.2rem;
+      color: #513e29;
+    }
+
+    /* extra cute touches */
+    .cute-emoji-line {
+      font-size: 1.5rem;
+      background: #ffefdb;
+      padding: 10px 20px;
+      border-radius: 50px;
+      display: inline-block;
+    }
+
+    /* clear float */
+    section::after { content: ""; clear: both; display: table; }
+  </style>
+</head>
+<body>
+
+<!-- main content: personal profile page - Maham from Gujrat -->
+<main>
+
+  <!-- header with name, and cute pa emoji (no black) -->
+  <header>
+    <h1>My Story ✨</h1>
+    <p>Maham · from Gujrat 💫</p>
+    <!-- extra cute avatar near header (small one) -->
+    <span style="font-size:2.2rem; filter: drop-shadow(2px 4px 0 #f3cba5);">👧🏽🌸</span>
+  </header>
+
+  <!-- navigation (internal links) pyara style -->
+  <nav>
+    <ul>
+      <li><a href="#story">📖 story</a></li>
+      <li><a href="#profile">👤 profile</a></li>
+      <li><a href="#hobby">🍿 hobby</a></li>
+      <li><a href="#more">✨ more</a></li>
+      <li><a href="#contact">📬 contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== SECTION 1: introduction & story ===== -->
+  <section id="story">
+    <h2>my story</h2>
+
+    <!-- profile avatar using figure — name pa jo emoji wo pyara, black nahi -->
+    <figure>
+      <span class="avatar-emoji" role="img" aria-label="Maham cute avatar">👧🏽🍿</span>
+      <figcaption>✨ Maham · Gujrat ✨</figcaption>
+    </figure>
+
+    <!-- article: my story -->
+    <article>
+      <h3 style="font-size:2rem; margin-top:0; color:#61462c; display:flex; align-items:center; gap:8px;">
+        <span>hello, i'm Maham</span> <span style="font-size:2.2rem;">👋🏽🥰</span>
+      </h3>
+      <p>I'm from <strong>Gujrat</strong>, a lovely city in Pakistan. I created this page to share my story using only <strong>semantic HTML</strong> — that means tags like header, article, section, and so on. I'm learning step by step, and this beige page is my little space on the web.</p>
+      <p>I love watching movies, spending time with family, and exploring new things. Welcome to my profile! <span style="font-size:1.5rem;">🎀</span></p>
+    </article>
+  </section>
+
+  <!-- ===== SECTION 2: profile info (name, from, hobby) ===== -->
+  <section id="profile">
+    <h2>my profile</h2>
+    <div class="info-box">
+      <div class="info-row">
+        <span class="info-label">name</span>
+        <span class="info-value">Maham 🩷</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">from</span>
+        <span class="info-value">Gujrat, Pakistan 🇵🇰</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">hobby</span>
+        <span class="info-value">watching movies 🎥 🍿</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">fun fact</span>
+        <span class="info-value">can quote many movie dialogues 😄</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 3: hobby (watching movies) ===== -->
+  <section id="hobby">
+    <h2>my favourite hobby</h2>
+    
+    <!-- blockquote style for fun quote about movies -->
+    <blockquote>
+      <p>“A movie is a story you can watch — my favourite way to relax.” 🎬</p>
+      <footer>— Maham 💕</footer>
+    </blockquote>
+
+    <!-- list of favourite movies (using ul) -->
+    <h3 style="margin-bottom:5px; color:#5f482e; font-size:1.8rem;">some movies i love:</h3>
+    <ul class="hobby-list">
+      <li>3 Idiots</li>
+      <li>Zindagi Na Milegi Dobara</li>
+      <li>Inside Out</li>
+      <li>PK</li>
+      <li>Up</li>
+    </ul>
+
+    <!-- small detail: how often i watch (with cute summary) -->
+    <details>
+      <summary>movie time 🎬</summary>
+      <p>I try to watch at least one movie every weekend. It's my favourite way to learn new stories and relax after a busy week. 🍫</p>
+    </details>
+  </section>
+
+  <!-- ===== SECTION 4: more about me ===== -->
+  <section id="more">
+    <h2>a little more</h2>
+
+    <time datetime="2026-03-18">📅 18 march 2026 · cute day</time>
+
+    <!-- fun fact with pre (little poem) -->
+    <p style="font-size:1.3rem; clear:right;">a small thought 💭</p>
+    <pre>
+Gujrat is my home,
+movies make me smile,
+semantic html is my new style.
+💖✨🍿
+    </pre>
+
+    <hr>
+
+    <h3>other things i like:</h3>
+    <ul style="background:#fcf0de; padding:18px 30px 18px 45px; border-radius:60px; list-style-type:'☕ '; border:2px solid #f0cfb0; font-size:1.25rem;">
+      <li>chai with friends</li>
+      <li>long walks</li>
+      <li>listening to music</li>
+      <li>trying new food</li>
+    </ul>
+
+    <!-- extra cute emoji line (to follow the 'name pa jo emoji wo pyara' ) -->
+    <div style="text-align:center; margin:20px 0;">
+      <span class="cute-emoji-line">👧🏽🎀  Maham  🎀👧🏽</span>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 5: contact ===== -->
+  <section id="contact">
+    <h2>say hello</h2>
+    <address>
+      📧 <strong>maham@story.page</strong><br>
+      📍 Gujrat, Pakistan<br>
+      🗣️ social: @maham_movies 🩷
+    </address>
+    <p style="margin-top:15px; font-size:1.1rem; background:#faebd8; padding:8px 20px; border-radius:40px;">
+      made with semantic html · beige beginner style 💻🍃
+    </p>
+  </section>
+
+  <!-- footer -->
+  <footer>
+    <p><strong>My Story · Maham</strong> — from Gujrat, loves movies 🎥</p>
+    <address>maham@semantic.page ✨</address>
+    <small>© 2026 · only semantic html (beginner friendly, cute beige) 💖</small>
+  </footer>
+
+</main>
+
+<!-- 
+  This page uses only semantic html:
+  header, nav, main, section, article, figure,
+  figcaption, details, summary, blockquote,
+  ul, li, pre, address, footer, time, hr.
+  No divs for structure (only small containers for styling).
+  All about Maham – name, from Gujrat, hobby watching movies.
+  Beige colours, super beginner friendly.
+  ---> 
+  <!-- name pa jo emoji hai wo pyara hai (avatar-emoji & header) , bilkul bhi black nahi -->
+  <!-- Maham's page is soft and cute 💕 -->
+</body>
+</html>
